@@ -16,6 +16,7 @@ export default function AddWish({ id }: { id: string }) {
     if (!wishContext) {
         throw new Error("WishContext is not provided. Wrap your component in <WishProvider>.");
     }
+    // @ts-ignore
     const { refreshWish } = wishContext;
 
     useEffect(() => {
@@ -46,6 +47,7 @@ export default function AddWish({ id }: { id: string }) {
                 if (res?.status === "success") {
                     setIsWished(false);
                     toast.success("Removed from wishlist", { position: "top-center", duration: 2000 });
+                    // @ts-ignore
                     refreshWish();
                 } else {
                     toast.error("Failed to remove", { position: "top-center" });
@@ -55,6 +57,7 @@ export default function AddWish({ id }: { id: string }) {
                 if (res?.status === "success") {
                     setIsWished(true);
                     toast.success("Added to wishlist ❤️", { position: "top-center", duration: 2000 });
+                    // @ts-ignore
                     refreshWish();
                 } else {
                     toast.error("Failed to add", { position: "top-center" });

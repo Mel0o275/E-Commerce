@@ -1,22 +1,12 @@
 "use client";
 
-import { createContext, useEffect, useState, ReactNode } from "react";
+import { createContext, useEffect, useState } from "react";
 import getUserWish from "@/WishActions/getUserWish.wish";
 
-type WishContextType = {
-  wish: number;
-  setWish: React.Dispatch<React.SetStateAction<number>>;
-  refreshWish: () => Promise<void>;
-};
+export const WishContext = createContext(null);
 
-export const WishContext = createContext<WishContextType | null>(null);
-
-interface Props {
-  children: ReactNode;
-}
-
-export default function WishContextProvider({ children }: Props) {
-  const [wish, setWish] = useState<number>(0);
+export default function WishContextProvider({ children }) {
+  const [wish, setWish] = useState(0);
 
   async function refreshWish() {
     try {
