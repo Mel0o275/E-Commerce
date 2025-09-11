@@ -88,6 +88,7 @@ export default function Cart() {
         setcount(count + 1)
       }
       else if (sign === '-') {
+        // @ts-ignore
         setcount(count - 1)
       }
       settotal(res.data.totalCartPrice);

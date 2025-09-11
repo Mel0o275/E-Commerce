@@ -10,6 +10,7 @@ export default function Wish() {
     const [wishlist, setWishlist] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
     const [removingItem, setRemovingItem] = useState<string | null>(null);
+    // @ts-ignore
     const { refreshWish } = useContext(WishContext);
 
     async function getUserWishData() {
