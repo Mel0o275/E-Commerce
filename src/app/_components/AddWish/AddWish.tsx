@@ -11,7 +11,12 @@ import { WishContext } from "@/context/WishContext";
 export default function AddWish({ id }: { id: string }) {
     const [loading, setLoading] = useState(false);
     const [isWished, setIsWished] = useState(false); 
-    const { refreshWish } = useContext(WishContext);
+
+    const wishContext = useContext(WishContext);
+    if (!wishContext) {
+        throw new Error("WishContext is not provided. Wrap your component in <WishProvider>.");
+    }
+    const { refreshWish } = wishContext;
 
     useEffect(() => {
         const getStateWish = async () => {
