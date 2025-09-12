@@ -1,0 +1,80 @@
+{
+  "node": {
+    "00c970081d16c0e0c9ab8d6612ed9b56ec44d674f2": {
+      "workers": {
+        "app/products/[id]/page": {
+          "moduleId": "97823",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/utilities/getMyToken.ts"
+        }
+      },
+      "layer": {
+        "app/products/[id]/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/utilities/getMyToken.ts"
+    },
+    "404f219f28c153f0ffaeeaa49981e83f9f3b268607": {
+      "workers": {
+        "app/products/[id]/page": {
+          "moduleId": "97823",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/CartAction/addProduct.action.ts"
+        }
+      },
+      "layer": {
+        "app/products/[id]/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/CartAction/addProduct.action.ts"
+    },
+    "406f9ecdc41ff9edc67cea5f0bcef745195abdc143": {
+      "workers": {
+        "app/products/[id]/page": {
+          "moduleId": "97823",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/WishActions/add.wish.ts"
+        }
+      },
+      "layer": {
+        "app/products/[id]/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/WishActions/add.wish.ts"
+    },
+    "40a54c6fc0460631c70ca009a3a8ed4aa9ce353cbf": {
+      "workers": {
+        "app/products/[id]/page": {
+          "moduleId": "97823",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/WishActions/remove.wish.ts"
+        }
+      },
+      "layer": {
+        "app/products/[id]/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/WishActions/remove.wish.ts"
+    },
+    "403e5797b3cbac343cf3360cb27ca99cc3cd160ae9": {
+      "workers": {
+        "app/products/[id]/page": {
+          "moduleId": "97823",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/productCatActions/relatedProducts.ts"
+        }
+      },
+      "layer": {
+        "app/products/[id]/page": "rsc"
+      },
+      "exportedName": "default",
+      "filename": "src/productCatActions/relatedProducts.ts"
+    }
+  },
+  "edge": {}
+}

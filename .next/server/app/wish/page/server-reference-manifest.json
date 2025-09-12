@@ -1,0 +1,35 @@
+{
+  "node": {
+    "00c970081d16c0e0c9ab8d6612ed9b56ec44d674f2": {
+      "workers": {
+        "app/wish/page": {
+          "moduleId": "73345",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/utilities/getMyToken.ts"
+        }
+      },
+      "layer": {
+        "app/wish/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/utilities/getMyToken.ts"
+    },
+    "40a54c6fc0460631c70ca009a3a8ed4aa9ce353cbf": {
+      "workers": {
+        "app/wish/page": {
+          "moduleId": "73345",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/WishActions/remove.wish.ts"
+        }
+      },
+      "layer": {
+        "app/wish/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/WishActions/remove.wish.ts"
+    }
+  },
+  "edge": {}
+}

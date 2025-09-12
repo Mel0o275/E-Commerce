@@ -1,0 +1,35 @@
+{
+  "node": {
+    "00c970081d16c0e0c9ab8d6612ed9b56ec44d674f2": {
+      "workers": {
+        "app/dashboard/page": {
+          "moduleId": "60450",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/utilities/getMyToken.ts"
+        }
+      },
+      "layer": {
+        "app/dashboard/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/utilities/getMyToken.ts"
+    },
+    "70a588044d6fc9913bea9367f08011f8a135c6d8e0": {
+      "workers": {
+        "app/dashboard/page": {
+          "moduleId": "60450",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/Api/updateInfo.ts"
+        }
+      },
+      "layer": {
+        "app/dashboard/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/Api/updateInfo.ts"
+    }
+  },
+  "edge": {}
+}

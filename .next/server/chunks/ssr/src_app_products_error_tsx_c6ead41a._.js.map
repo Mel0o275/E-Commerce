@@ -1,0 +1,1 @@
+{"version":3,"sources":["turbopack:///[project]/src/app/products/error.tsx"],"sourcesContent":["'use client'\r\n\r\nimport React from 'react'\r\n\r\nexport default function error() {\r\n  return (\r\n    <div>error</div>\r\n  )\r\n}\r\n"],"names":[],"mappings":"8EAIe,SAAS,IACtB,MACE,CAAA,EAAA,EAAA,GAAA,EAAC,MAAA,UAAI,SAET"}

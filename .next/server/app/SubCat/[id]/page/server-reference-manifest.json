@@ -1,0 +1,20 @@
+{
+  "node": {
+    "00c970081d16c0e0c9ab8d6612ed9b56ec44d674f2": {
+      "workers": {
+        "app/SubCat/[id]/page": {
+          "moduleId": "15007",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/utilities/getMyToken.ts"
+        }
+      },
+      "layer": {
+        "app/SubCat/[id]/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/utilities/getMyToken.ts"
+    }
+  },
+  "edge": {}
+}

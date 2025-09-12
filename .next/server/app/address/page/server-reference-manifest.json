@@ -1,0 +1,65 @@
+{
+  "node": {
+    "00c970081d16c0e0c9ab8d6612ed9b56ec44d674f2": {
+      "workers": {
+        "app/address/page": {
+          "moduleId": "47428",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/utilities/getMyToken.ts"
+        }
+      },
+      "layer": {
+        "app/address/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/utilities/getMyToken.ts"
+    },
+    "7820ff6d89a9553ec9b360ebdf103d1632b123343e": {
+      "workers": {
+        "app/address/page": {
+          "moduleId": "47428",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/Api/addAddress.ts"
+        }
+      },
+      "layer": {
+        "app/address/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/Api/addAddress.ts"
+    },
+    "00aec682ec0f62d3ffdb918d978b1069e4d6aeddf2": {
+      "workers": {
+        "app/address/page": {
+          "moduleId": "47428",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/Api/getAddress.ts"
+        }
+      },
+      "layer": {
+        "app/address/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/Api/getAddress.ts"
+    },
+    "40a22600d8ff45231d66e3c9275d2797e0248672aa": {
+      "workers": {
+        "app/address/page": {
+          "moduleId": "47428",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/Api/removeAddress.ts"
+        }
+      },
+      "layer": {
+        "app/address/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/Api/removeAddress.ts"
+    }
+  },
+  "edge": {}
+}

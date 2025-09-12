@@ -1,0 +1,35 @@
+{
+  "node": {
+    "00c970081d16c0e0c9ab8d6612ed9b56ec44d674f2": {
+      "workers": {
+        "app/profile/page": {
+          "moduleId": "30355",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/utilities/getMyToken.ts"
+        }
+      },
+      "layer": {
+        "app/profile/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/utilities/getMyToken.ts"
+    },
+    "7074a1292363e5618607ef1dad3539ac65a045742d": {
+      "workers": {
+        "app/profile/page": {
+          "moduleId": "30355",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/Api/updatePass.ts"
+        }
+      },
+      "layer": {
+        "app/profile/page": "action-browser"
+      },
+      "exportedName": "default",
+      "filename": "src/Api/updatePass.ts"
+    }
+  },
+  "edge": {}
+}
