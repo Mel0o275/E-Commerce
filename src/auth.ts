@@ -3,6 +3,7 @@ import Credentials from "next-auth/providers/credentials";
 import { jwtDecode } from "jwt-decode";
 
 export const authOptions: NextAuthOptions = {
+    secret: process.env.NEXTAUTH_SECRET,  // ✅ مهم جداً في Vercel
     pages: {
         signIn: "/login"
     },
@@ -23,11 +24,9 @@ export const authOptions: NextAuthOptions = {
                     headers: {
                         "content-Type": "application/json"
                     }
-                }
-                );
+                });
                 let payload = await res.json();
                 console.log(payload);
-
 
                 if (payload.message === "success") {
                     const decoded: { id: string } = jwtDecode(payload.token);
@@ -38,13 +37,9 @@ export const authOptions: NextAuthOptions = {
                         user: payload.user,
                         token: payload.token,
                     };
-                }
-
-                else {
+                } else {
                     throw new Error(payload.message || "Invalid credentials");
                 }
-                // return null;
-
             },
         }),
     ],
@@ -52,14 +47,15 @@ export const authOptions: NextAuthOptions = {
     callbacks: {
         async jwt({ token, user }) {
             if (user) {
-                token.user = user.user
+                token.user = user.user;
                 token.token = user.token;
             }
-            return token
+            return token;
         },
         async session({ session, token }) {
-            session.user = token.user
-            return session
+            session.user = token.user;
+            session.token = token.token; // ✅ خلي التوكن متاح في السيشن كمان
+            return session;
         }
     }
 }
