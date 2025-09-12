@@ -123,59 +123,47 @@ const authOptions = {
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$providers$2f$credentials$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"])({
             name: "Credentials",
             credentials: {
-                email: {
-                    label: "Email",
-                    type: "text"
-                },
-                password: {
-                    label: "Password",
-                    type: "password"
-                }
+                email: {},
+                password: {}
             },
-            async authorize (credentials) {
-                const res = await fetch(`${process.env.API}/auth/signin`, {
+            authorize: async (credentials)=>{
+                let res = await fetch(`${process.env.API}/auth/signin`, {
                     method: "POST",
                     body: JSON.stringify({
                         email: credentials?.email,
                         password: credentials?.password
                     }),
                     headers: {
-                        "Content-Type": "application/json"
+                        "content-Type": "application/json"
                     }
                 });
-                const payload = await res.json();
-                console.log("API Response:", payload);
+                let payload = await res.json();
+                console.log(payload);
                 if (payload.message === "success") {
                     const decoded = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jwt$2d$decode$2f$build$2f$esm$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["jwtDecode"])(payload.token);
-                    console.log("Decoded JWT:", decoded);
+                    console.log(decoded);
                     return {
                         id: decoded.id,
-                        name: payload.user.name,
-                        email: payload.user.email,
-                        role: payload.user.role,
+                        user: payload.user,
                         token: payload.token
                     };
+                } else {
+                    throw new Error(payload.message || "Invalid credentials");
                 }
-                throw new Error(payload.message || "Invalid credentials");
+            // return null;
             }
         })
     ],
     callbacks: {
         async jwt ({ token, user }) {
             if (user) {
-                token.user = {
-                    id: user.id,
-                    name: user.name,
-                    email: user.email,
-                    role: user.role
-                };
+                token.user = user.user;
                 token.token = user.token;
             }
             return token;
         },
         async session ({ session, token }) {
             session.user = token.user;
-            session.accessToken = token.token;
             return session;
         }
     }

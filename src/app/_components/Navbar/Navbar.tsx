@@ -1,4 +1,4 @@
-/* eslint-disabled */ 
+/* eslint-disabled */
 "use client";
 import { useContext, useState } from "react";
 import Link from "next/link";
@@ -12,7 +12,7 @@ export default function Navbar() {
   const { count: cartCount } = useContext(CartContext);
   const wishContext = useContext(WishContext);
   // @ts-ignore
-  const wishCount = wishContext ? wishContext.count : 0;
+  const { wishCount } = useContext(WishContext) || { wishCount: 0 };
   const [menuOpen, setMenuOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
 
@@ -107,6 +107,7 @@ export default function Navbar() {
                     )}
                   </Link>
                 </li>
+
               </>
             )}
           </ul>

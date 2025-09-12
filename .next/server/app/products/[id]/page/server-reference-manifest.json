@@ -3,7 +3,7 @@
     "00c970081d16c0e0c9ab8d6612ed9b56ec44d674f2": {
       "workers": {
         "app/products/[id]/page": {
-          "moduleId": "97823",
+          "moduleId": "[project]/.next-internal/server/app/products/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/productCatActions/relatedProducts.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/CartAction/addProduct.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/WishActions/add.wish.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/WishActions/remove.wish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "default",
           "filename": "src/utilities/getMyToken.ts"
@@ -15,10 +15,25 @@
       "exportedName": "default",
       "filename": "src/utilities/getMyToken.ts"
     },
+    "403e5797b3cbac343cf3360cb27ca99cc3cd160ae9": {
+      "workers": {
+        "app/products/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/products/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/productCatActions/relatedProducts.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/CartAction/addProduct.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/WishActions/add.wish.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/WishActions/remove.wish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/productCatActions/relatedProducts.ts"
+        }
+      },
+      "layer": {
+        "app/products/[id]/page": "rsc"
+      },
+      "exportedName": "default",
+      "filename": "src/productCatActions/relatedProducts.ts"
+    },
     "404f219f28c153f0ffaeeaa49981e83f9f3b268607": {
       "workers": {
         "app/products/[id]/page": {
-          "moduleId": "97823",
+          "moduleId": "[project]/.next-internal/server/app/products/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/productCatActions/relatedProducts.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/CartAction/addProduct.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/WishActions/add.wish.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/WishActions/remove.wish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "default",
           "filename": "src/CartAction/addProduct.action.ts"
@@ -33,7 +48,7 @@
     "406f9ecdc41ff9edc67cea5f0bcef745195abdc143": {
       "workers": {
         "app/products/[id]/page": {
-          "moduleId": "97823",
+          "moduleId": "[project]/.next-internal/server/app/products/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/productCatActions/relatedProducts.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/CartAction/addProduct.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/WishActions/add.wish.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/WishActions/remove.wish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "default",
           "filename": "src/WishActions/add.wish.ts"
@@ -48,7 +63,7 @@
     "40a54c6fc0460631c70ca009a3a8ed4aa9ce353cbf": {
       "workers": {
         "app/products/[id]/page": {
-          "moduleId": "97823",
+          "moduleId": "[project]/.next-internal/server/app/products/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/productCatActions/relatedProducts.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/CartAction/addProduct.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/WishActions/add.wish.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/WishActions/remove.wish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "default",
           "filename": "src/WishActions/remove.wish.ts"
@@ -59,21 +74,6 @@
       },
       "exportedName": "default",
       "filename": "src/WishActions/remove.wish.ts"
-    },
-    "403e5797b3cbac343cf3360cb27ca99cc3cd160ae9": {
-      "workers": {
-        "app/products/[id]/page": {
-          "moduleId": "97823",
-          "async": false,
-          "exportedName": "default",
-          "filename": "src/productCatActions/relatedProducts.ts"
-        }
-      },
-      "layer": {
-        "app/products/[id]/page": "rsc"
-      },
-      "exportedName": "default",
-      "filename": "src/productCatActions/relatedProducts.ts"
     }
   },
   "edge": {}

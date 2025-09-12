@@ -11,15 +11,8 @@ import { WishContext } from "@/context/WishContext";
 export default function AddWish({ id }: { id: string }) {
     const [loading, setLoading] = useState(false);
     const [isWished, setIsWished] = useState(false);
-
-    // @ts-ignore because WishContext is JS
-    const wishContext = useContext(WishContext);
-
-    if (!wishContext) {
-        throw new Error("WishContext is not provided. Wrap with <WishProvider>.");
-    }
-
-    const { refreshWish } = wishContext;
+    // @ts-ignore
+    const { refreshWish } = useContext(WishContext);
 
     useEffect(() => {
         const getStateWish = async () => {
@@ -27,7 +20,7 @@ export default function AddWish({ id }: { id: string }) {
                 const res = await getUserWish();
                 if (res?.status === "success") {
                     const wished = res.data.some((item: any) => item.id === id);
-                    setIsWished(wished);
+                    setIsWished(wished); // ✅ local product state
                 } else {
                     setIsWished(false);
                 }
@@ -49,7 +42,6 @@ export default function AddWish({ id }: { id: string }) {
                 if (res?.status === "success") {
                     setIsWished(false);
                     toast.success("Removed from wishlist", { position: "top-center", duration: 2000 });
-                    // @ts-ignore
                     refreshWish();
                 } else {
                     toast.error("Failed to remove", { position: "top-center" });
@@ -59,7 +51,6 @@ export default function AddWish({ id }: { id: string }) {
                 if (res?.status === "success") {
                     setIsWished(true);
                     toast.success("Added to wishlist ❤️", { position: "top-center", duration: 2000 });
-                    // @ts-ignore
                     refreshWish();
                 } else {
                     toast.error("Failed to add", { position: "top-center" });
@@ -86,4 +77,3 @@ export default function AddWish({ id }: { id: string }) {
         </button>
     );
 }
-

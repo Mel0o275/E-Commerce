@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/Route/Front-end/React/e-commerce-app/e-commerce/src/app/products/error.tsx"],"sourcesContent":["'use client'\r\n\r\nimport React from 'react'\r\n\r\nexport default function error() {\r\n  return (\r\n    <div>error</div>\r\n  )\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;;AAIe,SAAS;IACtB,qBACE,6LAAC;kBAAI;;;;;;AAET","debugId":null}}]
+}

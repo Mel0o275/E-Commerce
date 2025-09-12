@@ -14,8 +14,14 @@
           "exportedName": "default",
           "filename": "src/utilities/getMyToken.ts"
         },
-        "app/signin/page": {
-          "moduleId": "[project]/.next-internal/server/app/signin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/products/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/products/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/productCatActions/relatedProducts.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/CartAction/addProduct.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/WishActions/add.wish.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/WishActions/remove.wish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/utilities/getMyToken.ts"
+        },
+        "app/wish/page": {
+          "moduleId": "[project]/.next-internal/server/app/wish/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/WishActions/remove.wish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "default",
           "filename": "src/utilities/getMyToken.ts"
@@ -24,7 +30,8 @@
       "layer": {
         "app/login/page": "action-browser",
         "app/page": "action-browser",
-        "app/signin/page": "action-browser"
+        "app/products/[id]/page": "action-browser",
+        "app/wish/page": "action-browser"
       },
       "filename": "src/utilities/getMyToken.ts",
       "exportedName": "default"
@@ -36,12 +43,71 @@
           "async": false,
           "exportedName": "default",
           "filename": "src/CartAction/addProduct.action.ts"
+        },
+        "app/products/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/products/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/productCatActions/relatedProducts.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/CartAction/addProduct.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/WishActions/add.wish.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/WishActions/remove.wish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/CartAction/addProduct.action.ts"
         }
       },
       "layer": {
-        "app/page": "action-browser"
+        "app/page": "action-browser",
+        "app/products/[id]/page": "action-browser"
       },
       "filename": "src/CartAction/addProduct.action.ts",
+      "exportedName": "default"
+    },
+    "40a54c6fc0460631c70ca009a3a8ed4aa9ce353cbf": {
+      "workers": {
+        "app/products/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/products/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/productCatActions/relatedProducts.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/CartAction/addProduct.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/WishActions/add.wish.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/WishActions/remove.wish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/WishActions/remove.wish.ts"
+        },
+        "app/wish/page": {
+          "moduleId": "[project]/.next-internal/server/app/wish/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/WishActions/remove.wish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/WishActions/remove.wish.ts"
+        }
+      },
+      "layer": {
+        "app/products/[id]/page": "action-browser",
+        "app/wish/page": "action-browser"
+      },
+      "filename": "src/WishActions/remove.wish.ts",
+      "exportedName": "default"
+    },
+    "403e5797b3cbac343cf3360cb27ca99cc3cd160ae9": {
+      "workers": {
+        "app/products/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/products/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/productCatActions/relatedProducts.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/CartAction/addProduct.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/WishActions/add.wish.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/WishActions/remove.wish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/productCatActions/relatedProducts.ts"
+        }
+      },
+      "layer": {
+        "app/products/[id]/page": "rsc"
+      },
+      "filename": "src/productCatActions/relatedProducts.ts",
+      "exportedName": "default"
+    },
+    "406f9ecdc41ff9edc67cea5f0bcef745195abdc143": {
+      "workers": {
+        "app/products/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/products/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/productCatActions/relatedProducts.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/CartAction/addProduct.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/WishActions/add.wish.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/WishActions/remove.wish.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/WishActions/add.wish.ts"
+        }
+      },
+      "layer": {
+        "app/products/[id]/page": "action-browser"
+      },
+      "filename": "src/WishActions/add.wish.ts",
       "exportedName": "default"
     }
   },
