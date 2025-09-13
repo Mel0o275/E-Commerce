@@ -2,6 +2,30 @@
   "node": {
     "00c970081d16c0e0c9ab8d6612ed9b56ec44d674f2": {
       "workers": {
+        "app/allorders/page": {
+          "moduleId": "[project]/.next-internal/server/app/allorders/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/utilities/getMyToken.ts"
+        },
+        "app/cart/page": {
+          "moduleId": "[project]/.next-internal/server/app/cart/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/CartAction/removeProduct.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/CartAction/updataProduct.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/utilities/getMyToken.ts"
+        },
+        "app/checkout/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/checkout/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/checkoutActions/checkout.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/checkoutActions/cash.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/utilities/getMyToken.ts"
+        },
+        "app/login/page": {
+          "moduleId": "[project]/.next-internal/server/app/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/utilities/getMyToken.ts"
+        },
         "app/page": {
           "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/CartAction/addProduct.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -10,6 +34,10 @@
         }
       },
       "layer": {
+        "app/allorders/page": "action-browser",
+        "app/cart/page": "action-browser",
+        "app/checkout/[id]/page": "action-browser",
+        "app/login/page": "action-browser",
         "app/page": "action-browser"
       },
       "filename": "src/utilities/getMyToken.ts",
@@ -28,6 +56,66 @@
         "app/page": "action-browser"
       },
       "filename": "src/CartAction/addProduct.action.ts",
+      "exportedName": "default"
+    },
+    "409fc0c9355dcff2fa132727164d058fbe05ee43a2": {
+      "workers": {
+        "app/cart/page": {
+          "moduleId": "[project]/.next-internal/server/app/cart/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/CartAction/removeProduct.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/CartAction/updataProduct.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/CartAction/removeProduct.ts"
+        }
+      },
+      "layer": {
+        "app/cart/page": "action-browser"
+      },
+      "filename": "src/CartAction/removeProduct.ts",
+      "exportedName": "default"
+    },
+    "607aca37f53d2e27c5d338d10bf54654f4186535d4": {
+      "workers": {
+        "app/cart/page": {
+          "moduleId": "[project]/.next-internal/server/app/cart/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/CartAction/removeProduct.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/CartAction/updataProduct.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/CartAction/updataProduct.ts"
+        }
+      },
+      "layer": {
+        "app/cart/page": "action-browser"
+      },
+      "filename": "src/CartAction/updataProduct.ts",
+      "exportedName": "default"
+    },
+    "708632e2785b8d151576cb1bc8c2394fc38962c84f": {
+      "workers": {
+        "app/checkout/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/checkout/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/checkoutActions/checkout.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/checkoutActions/cash.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/checkoutActions/checkout.ts"
+        }
+      },
+      "layer": {
+        "app/checkout/[id]/page": "action-browser"
+      },
+      "filename": "src/checkoutActions/checkout.ts",
+      "exportedName": "default"
+    },
+    "60964826cb48749f5513e86f0f7627bde214178030": {
+      "workers": {
+        "app/checkout/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/checkout/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/checkoutActions/checkout.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/checkoutActions/cash.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/checkoutActions/cash.ts"
+        }
+      },
+      "layer": {
+        "app/checkout/[id]/page": "action-browser"
+      },
+      "filename": "src/checkoutActions/cash.ts",
       "exportedName": "default"
     }
   },
