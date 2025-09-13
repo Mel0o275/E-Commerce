@@ -10,12 +10,7 @@ import { toast } from 'sonner'
 import { Checkout, CheckoutType } from '@/schema/checkout'
 import checkoutOnline from '@/checkoutActions/checkout'
 import CheckoutCash from '@/checkoutActions/cash'
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Checkout - Meloshop",
-  description: "Complete Your Purchase",
-};
 export default function CheckOut() {
     const [loading, setLoading] = useState(false);
 

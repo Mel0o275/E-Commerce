@@ -11,12 +11,7 @@ import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 import { signIn } from 'next-auth/react'
 import Link from 'next/link'
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Login - Meloshop",
-  description: "Access Your Account",
-};
 export default function Login() {
   const [loading, setLoading] = useState(false)
   const router = useRouter();

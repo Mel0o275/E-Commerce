@@ -1,10 +1,5 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/allorders/[userId]/page": "app/allorders/[userId]/page.js",
-  "/allorders/page": "app/allorders/page.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/cart/page": "app/cart/page.js",
-  "/checkout/[id]/page": "app/checkout/[id]/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"
 }

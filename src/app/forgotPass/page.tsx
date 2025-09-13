@@ -18,12 +18,7 @@ import forgetPass from '@/Api/forgetPass';
 import { toast } from 'sonner';
 import verifyCode from '@/Api/verifyReset';
 import reset from '@/Api/reset';
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Forget-Password - Meloshop",
-  description: "Reset Your Password",
-};
 export default function ForgetPass() {
     const [showPopup, setShowPopup] = useState(false);
     const [showPasswordPopup, setShowPasswordPopup] = useState(false);

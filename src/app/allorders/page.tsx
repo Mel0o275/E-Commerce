@@ -2,12 +2,6 @@
 
 import React from "react";
 import { Truck } from "lucide-react";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Shipping - Meloshop",
-  description: "Your order is on the way!",
-};
 
 export default function Page() {
   return (

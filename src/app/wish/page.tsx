@@ -5,12 +5,7 @@ import removeWish from "@/WishActions/remove.wish";
 import React, { useEffect, useState, useContext } from "react";
 import { WishContext } from "@/context/WishContext";
 import { toast } from "sonner";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Wishlist - Meloshop",
-  description: "Your Favorite Products",
-};
 export default function Wish() {
     const [wishlist, setWishlist] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);

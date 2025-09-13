@@ -10,12 +10,7 @@ import { updateInfoschema, updateInfoschemaType } from '@/schema/updateInfo';
 import updateInfo from '@/Api/updateInfo';
 import { signOut } from 'next-auth/react';
 import { toast } from 'sonner';
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Update-Info - Meloshop",
-  description: "Update Your Information",
-};
 
 export default function UpdateInfo() {
 

@@ -3,12 +3,7 @@
 import getUserOrders from '@/Api/getUserOrders';
 import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Orders - Meloshop",
-  description: "Your Orders History",
-};
 
 export default function page() {
 

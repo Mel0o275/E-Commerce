@@ -10,12 +10,7 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Sign-Up - Meloshop",
-  description: "Create a New Account",
-};
 export default function SignIn() {
   const [loading, setLoading] = useState(false)
   const router = useRouter();
