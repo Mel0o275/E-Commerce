@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["file:///D:/Route/Front-end/React/e-commerce-app/e-commerce/src/app/allorders/page.tsx"],"sourcesContent":["import React from 'react'\r\n\r\nexport default function page() {\r\n  return<>\r\n    <div className=\"max-w-4xl mx-auto p-6\">\r\n      <h1 className=\"text-2xl font-bold mb-4\">User Orders</h1>\r\n      <p className=\"text-gray-600\">Order details will be displayed here.</p>\r\n      \r\n    </div>\r\n  </>\r\n}\r\n"],"names":[],"mappings":";;;;;;AAEe,SAAS;IACtB,qBAAM;kBACJ,cAAA,8OAAC;YAAI,WAAU;;8BACb,8OAAC;oBAAG,WAAU;8BAA0B;;;;;;8BACxC,8OAAC;oBAAE,WAAU;8BAAgB;;;;;;;;;;;;;AAInC","debugId":null}}]
+}

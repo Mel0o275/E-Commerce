@@ -134,7 +134,7 @@ const authOptions = {
                         password: credentials?.password
                     }),
                     headers: {
-                        "content-Type": "application/json"
+                        "Content-Type": "application/json"
                     }
                 });
                 let payload = await res.json();
