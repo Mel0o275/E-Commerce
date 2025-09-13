@@ -12,7 +12,7 @@ export default async function getAddresses() {
         method: 'GET',
         headers: {
           "Content-Type": "application/json",
-          token: token as string,
+          token: String(token),
         },
       });
 
