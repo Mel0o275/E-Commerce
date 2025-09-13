@@ -20,8 +20,11 @@ export default function Page() {
 
   
   useEffect(() => {
-    fetchOrders();
-  }, [session?.user.id]);
+    if (session?.user?.id) {
+      fetchOrders();
+    }
+  }, [session?.user?.id]);
+  
     
   return (
     <div className="max-w-4xl mx-auto p-6">
