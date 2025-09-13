@@ -23,6 +23,12 @@
           "exportedName": "default",
           "filename": "src/utilities/getMyToken.ts"
         },
+        "app/allorders/[userId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/allorders/[userId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/utilities/getMyToken.ts"
+        },
         "app/allorders/page": {
           "moduleId": "[project]/.next-internal/server/app/allorders/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -50,6 +56,7 @@
       },
       "layer": {
         "app/_not-found/page": "action-browser",
+        "app/allorders/[userId]/page": "action-browser",
         "app/allorders/page": "action-browser",
         "app/cart/page": "action-browser",
         "app/checkout/[id]/page": "action-browser",

@@ -3,7 +3,7 @@
     "00c970081d16c0e0c9ab8d6612ed9b56ec44d674f2": {
       "workers": {
         "app/allorders/[userId]/page": {
-          "moduleId": "26632",
+          "moduleId": "[project]/.next-internal/server/app/allorders/[userId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "default",
           "filename": "src/utilities/getMyToken.ts"
