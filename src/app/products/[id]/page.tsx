@@ -4,7 +4,12 @@ import Details from "@/app/_components/Details/Details";
 import SingleProduct from "@/app/_components/singleProduct/SingleProduct";
 import relatedProducts from "@/productCatActions/relatedProducts";
 import React from "react"
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Product - Meloshop",
+  description: "Explore Product",
+};
 export default async function Product({ params } : {params : Promise<{id : string}>}) {
   const {id} = await params;
   const data = await product(id);

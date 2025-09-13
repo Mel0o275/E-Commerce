@@ -81,11 +81,11 @@ export default function Navbar() {
                   {userMenuOpen && (
                     <div className="absolute right-0 mt-2 w-40 bg-white text-black rounded-lg shadow-lg overflow-hidden z-50">
                       <Link href="/profile" className="block px-4 py-2 hover:bg-gray-100">Profile</Link>
-                      <Link href="/dashboard" className="block px-4 py-2 hover:bg-gray-100">Dashboard</Link>
+                      <Link href="/dashboard" className="block px-4 py-2 hover:bg-gray-100">Update Info</Link>
                       <Link href="/address" className="block px-4 py-2 hover:bg-gray-100">Address</Link>
                       <button
                         onClick={logOut}
-                        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                        className="cursor-pointer block w-full text-left px-4 py-2 hover:bg-gray-100"
                       >
                         Sign Out
                       </button>
@@ -93,7 +93,6 @@ export default function Navbar() {
                   )}
                 </li>
 
-                {/* Wishlist icon */}
                 <li className="relative">
                   <Link href="/wish">
                     <i

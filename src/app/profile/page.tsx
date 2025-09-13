@@ -10,7 +10,12 @@ import updatePass from "@/Api/updatePass";
 import { toast } from "sonner";
 import { signOut } from "next-auth/react";
 import { useState } from "react";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Update-Password - Meloshop",
+  description: "Update Your Password",
+};
 export default function UpdatePassForm() {
   const [loading, setLoading] = useState(false)
     

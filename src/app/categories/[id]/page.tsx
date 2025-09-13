@@ -4,7 +4,12 @@ import { subCat } from '@/Types/sub.type';
 import CatDetails from '@/app/_components/CatDetails/CatDetails';
 import SingleSub from '@/app/_components/SingleSub/SingleSub';
 import React from 'react'
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Category - Meloshop",
+  description: "Explore Category",
+};
 export default async function cat({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
     const data = await category(id);

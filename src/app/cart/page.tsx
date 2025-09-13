@@ -9,7 +9,12 @@ import { CartContext } from '@/context/CartContext'
 import { CartProduct } from '@/Types/cart.type'
 import Link from 'next/link'
 import Image from 'next/image'
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Cart - Meloshop",
+  description: "Your Shopping Cart",
+};
 export default function Cart() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
