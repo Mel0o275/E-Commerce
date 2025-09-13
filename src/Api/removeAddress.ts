@@ -12,7 +12,7 @@ export default async function removeAddresses(id: string) {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json",
-                token: token,
+                token: token as string,
             },
         });
 

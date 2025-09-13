@@ -11,7 +11,7 @@ export default async function updatePass(currentPassword : string, newPassword :
     const res = await fetch("https://ecommerce.routemisr.com/api/v1/users/changeMyPassword", {
         method: "PUT",
         headers: {
-            token: token,
+            token: token as string,
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
