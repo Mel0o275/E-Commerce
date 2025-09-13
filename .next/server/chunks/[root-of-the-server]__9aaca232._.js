@@ -159,11 +159,13 @@ const authOptions = {
             if (user) {
                 token.user = user.user;
                 token.token = user.token;
+                token.sub = user.id;
             }
             return token;
         },
         async session ({ session, token }) {
             session.user = token.user;
+            session.user.id = token.sub;
             return session;
         }
     }

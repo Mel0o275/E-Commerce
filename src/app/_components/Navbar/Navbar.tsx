@@ -81,6 +81,7 @@ export default function Navbar() {
                   {userMenuOpen && (
                     <div className="absolute right-0 mt-2 w-40 bg-white text-black rounded-lg shadow-lg overflow-hidden z-50">
                       <Link href="/profile" className="block px-4 py-2 hover:bg-gray-100">Profile</Link>
+                      <Link href="/allorders" className="block px-4 py-2 hover:bg-gray-100">Orders</Link>
                       <Link href="/dashboard" className="block px-4 py-2 hover:bg-gray-100">Update Info</Link>
                       <Link href="/address" className="block px-4 py-2 hover:bg-gray-100">Address</Link>
                       <button

@@ -1,73 +1,83 @@
 "use client";
 
-import React from "react";
-import { Truck } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { useSession } from "next-auth/react";
+import getUserOrders from "@/Api/getUserOrders";
 
 export default function Page() {
+  const { data: session } = useSession();
+  const [orders, setorders] = useState([])
+
+  console.log(session);
+
+
+  async function fetchOrders() {
+    const data = await getUserOrders(session?.user.id as string);
+    console.log(data);
+    setorders(data);
+    console.log(orders);
+  }
+
+  
+  useEffect(() => {
+    fetchOrders();
+  }, []);
+    
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-blue-50 to-blue-100">
-      <div className="relative w-full max-w-xl h-32 overflow-hidden">
-        <div className="absolute inset-0 flex items-center">
-          <div className="animate-truck flex items-center">
-            <span className="w-4 h-4 bg-gray-400 rounded-full opacity-70 mr-2 animate-smoke"></span>
-            <Truck size={80} className="text-blue-600 drop-shadow-lg" />
-          </div>
+    <div className="max-w-4xl mx-auto p-6">
+
+      {orders.length > 0 ? (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {orders.map((order: any) => (
+            <div
+              key={order._id}
+              className="bg-white shadow-md rounded-lg p-4 border hover:shadow-lg transition"
+            >
+              <h2 className="text-lg font-semibold mb-2">
+                Payment:{" "}
+                <span
+                  className={`${
+                    order.paymentMethodType === "cash"
+                      ? "text-green-600"
+                      : "text-blue-600"
+                  }`}
+                >
+                  {order.paymentMethodType.toUpperCase()}
+                </span>
+              </h2>
+
+              <p className="text-gray-700 mb-1">
+                Total: <span className="font-bold">{order.totalOrderPrice} EGP</span>
+              </p>
+
+              <p className="text-gray-700 mb-1">
+                Shipping: <span className="font-medium">{order.shippingPrice} EGP</span>
+              </p>
+
+              <p className="text-gray-700 mb-1">
+                Tax: <span className="font-medium">{order.taxPrice} EGP</span>
+              </p>
+
+              <div className="mt-3 p-3 bg-gray-50 rounded">
+                <p className="text-gray-800 font-medium">Shipping Address:</p>
+                <p className="text-gray-600 text-sm">
+                  {order.shippingAddress.details || "N/A"}, {order.shippingAddress.city}
+                </p>
+                <p className="text-gray-600 text-sm">{order.shippingAddress.phone}</p>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-
-      <h1 className="text-3xl font-extrabold text-blue-700 mt-10 animate-pulse drop-shadow-sm">
-        Order Is On Shipping...
-      </h1>
-
-      <div className="w-64 h-3 bg-gray-200 rounded-full mt-6 overflow-hidden">
-        <div className="h-full bg-blue-500 animate-progress"></div>
-      </div>
-
-      <style jsx>{`
-        /* Truck Animation */
-        .animate-truck {
-          display: inline-flex;
-          animation: moveTruck 6s ease-in-out infinite ;
-        }
-        @keyframes moveTruck {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-
-        .animate-smoke {
-          animation: puff 1.5s ease-in-out infinite;
-        }
-        @keyframes puff {
-          0% {
-            opacity: 0.8;
-            transform: translateY(0) scale(0.5);
-          }
-          50% {
-            opacity: 0.4;
-            transform: translateY(-10px) scale(1);
-          }
-          100% {
-            opacity: 0;
-            transform: translateY(-20px) scale(1.5);
-          }
-        }
-
-        .animate-progress {
-          animation: load 2s linear infinite;
-        }
-        @keyframes load {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-      `}</style>
+      ) : (
+        <div className="flex items-center justify-center h-screen bg-gray-50 dark:bg-gray-900">
+            <div className="flex flex-col items-center">
+                <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                <p className="mt-4 text-gray-700 dark:text-gray-300 text-lg font-medium">
+                    Loading ...
+                </p>
+            </div>
+        </div>
+      )}
     </div>
   );
 }
