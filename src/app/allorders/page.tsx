@@ -12,7 +12,7 @@ export default function Page() {
 
 
   async function fetchOrders() {
-    const data = await getUserOrders(session?.user.id);
+    const data = await getUserOrders(session?.user.id!);
     console.log(data);
     setorders(data);
     console.log(orders);

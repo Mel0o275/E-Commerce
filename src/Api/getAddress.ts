@@ -10,7 +10,6 @@ export default async function getAddresses() {
     try {
       const res = await fetch(`https://ecommerce.routemisr.com/api/v1/addresses`, {
         method: 'GET',
-        // @ts-ignore
         headers: {
           "Content-Type": "application/json",
           token: token,
