@@ -4,38 +4,30 @@
 
 __turbopack_context__.s([
     "default",
-    ()=>OrdersPage
+    ()=>Page
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$UserIdContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/context/UserIdContext.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next-auth/react/index.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
-function OrdersPage() {
+function Page() {
     _s();
-    const { userId } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$UserIdContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useUserId"])();
-    const [orders, setOrders] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "OrdersPage.useEffect": ()=>{
-            if (!userId) return;
-            async function fetchOrders() {
-                try {
-                    const res = await fetch("".concat(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_API, "/orders/user/").concat(userId));
-                    const data = await res.json();
-                    setOrders(data.orders || []);
-                } catch (error) {
-                    console.error("Error fetching orders:", error);
-                }
-            }
-            fetchOrders();
-        }
-    }["OrdersPage.useEffect"], [
-        userId
-    ]);
+    const { data: session } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSession"])();
+    const [orders, setorders] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    console.log(session === null || session === void 0 ? void 0 : session.user.id);
+    // async function fetchOrders() {
+    //   const data = await getUserOrders(session?.user.id);
+    //   console.log(data);
+    //   setorders(data);
+    //   console.log(orders);
+    // }
+    // useEffect(() => {
+    //   fetchOrders();
+    // }, []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "max-w-4xl mx-auto p-6",
         children: orders.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -53,13 +45,13 @@ function OrdersPage() {
                                     children: order.paymentMethodType.toUpperCase()
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/allorders/page.tsx",
-                                    lineNumber: 40,
+                                    lineNumber: 38,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/allorders/page.tsx",
-                            lineNumber: 38,
+                            lineNumber: 36,
                             columnNumber: 15
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -74,13 +66,13 @@ function OrdersPage() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/allorders/page.tsx",
-                                    lineNumber: 52,
+                                    lineNumber: 50,
                                     columnNumber: 24
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/allorders/page.tsx",
-                            lineNumber: 51,
+                            lineNumber: 49,
                             columnNumber: 15
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -95,13 +87,13 @@ function OrdersPage() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/allorders/page.tsx",
-                                    lineNumber: 56,
+                                    lineNumber: 54,
                                     columnNumber: 27
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/allorders/page.tsx",
-                            lineNumber: 55,
+                            lineNumber: 53,
                             columnNumber: 15
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -116,13 +108,13 @@ function OrdersPage() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/allorders/page.tsx",
-                                    lineNumber: 60,
+                                    lineNumber: 58,
                                     columnNumber: 22
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/allorders/page.tsx",
-                            lineNumber: 59,
+                            lineNumber: 57,
                             columnNumber: 15
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -133,7 +125,7 @@ function OrdersPage() {
                                     children: "Shipping Address:"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/allorders/page.tsx",
-                                    lineNumber: 64,
+                                    lineNumber: 62,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -145,7 +137,7 @@ function OrdersPage() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/allorders/page.tsx",
-                                    lineNumber: 65,
+                                    lineNumber: 63,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -153,24 +145,24 @@ function OrdersPage() {
                                     children: order.shippingAddress.phone
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/allorders/page.tsx",
-                                    lineNumber: 68,
+                                    lineNumber: 66,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/allorders/page.tsx",
-                            lineNumber: 63,
+                            lineNumber: 61,
                             columnNumber: 15
                         }, this)
                     ]
                 }, order._id, true, {
                     fileName: "[project]/src/app/allorders/page.tsx",
-                    lineNumber: 34,
+                    lineNumber: 32,
                     columnNumber: 13
                 }, this))
         }, void 0, false, {
             fileName: "[project]/src/app/allorders/page.tsx",
-            lineNumber: 32,
+            lineNumber: 30,
             columnNumber: 9
         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "flex items-center justify-center h-screen bg-gray-50 dark:bg-gray-900",
@@ -181,7 +173,7 @@ function OrdersPage() {
                         className: "w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"
                     }, void 0, false, {
                         fileName: "[project]/src/app/allorders/page.tsx",
-                        lineNumber: 76,
+                        lineNumber: 74,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -189,34 +181,34 @@ function OrdersPage() {
                         children: "Loading ..."
                     }, void 0, false, {
                         fileName: "[project]/src/app/allorders/page.tsx",
-                        lineNumber: 77,
+                        lineNumber: 75,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/allorders/page.tsx",
-                lineNumber: 75,
+                lineNumber: 73,
                 columnNumber: 13
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/allorders/page.tsx",
-            lineNumber: 74,
+            lineNumber: 72,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/allorders/page.tsx",
-        lineNumber: 29,
+        lineNumber: 27,
         columnNumber: 5
     }, this);
 }
-_s(OrdersPage, "UgvSXlpiIi2Z02E47f5PAmW8Ezs=", false, function() {
+_s(Page, "8qB2JP6S0Ef0oZKMamcQC5PTdvs=", false, function() {
     return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$UserIdContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useUserId"]
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSession"]
     ];
 });
-_c = OrdersPage;
+_c = Page;
 var _c;
-__turbopack_context__.k.register(_c, "OrdersPage");
+__turbopack_context__.k.register(_c, "Page");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }

@@ -11,7 +11,7 @@ export default async function updateInfo(name : string, email : string, phone : 
     const res = await fetch("https://ecommerce.routemisr.com/api/v1/users/updateMe/", {
         method: "PUT",
         headers: {
-            token: token as string,
+            token: token,
             "Content-Type": "application/json",
         },
         body: JSON.stringify({

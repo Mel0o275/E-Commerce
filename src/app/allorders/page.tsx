@@ -8,11 +8,11 @@ export default function Page() {
   const { data: session } = useSession();
   const [orders, setorders] = useState([])
 
-  console.log(session);
+  console.log(session?.user.id);
 
 
   async function fetchOrders() {
-    const data = await getUserOrders(session?.user.id as string);
+    const data = await getUserOrders(session?.user.id);
     console.log(data);
     setorders(data);
     console.log(orders);
@@ -21,7 +21,7 @@ export default function Page() {
   
   useEffect(() => {
     fetchOrders();
-  }, []);
+  }, [session?.user.id]);
     
   return (
     <div className="max-w-4xl mx-auto p-6">

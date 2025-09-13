@@ -2,6 +2,18 @@
   "node": {
     "00c970081d16c0e0c9ab8d6612ed9b56ec44d674f2": {
       "workers": {
+        "app/allorders/[userId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/allorders/[userId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/utilities/getMyToken.ts"
+        },
+        "app/allorders/page": {
+          "moduleId": "[project]/.next-internal/server/app/allorders/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "default",
+          "filename": "src/utilities/getMyToken.ts"
+        },
         "app/cart/page": {
           "moduleId": "[project]/.next-internal/server/app/cart/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/utilities/getMyToken.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/CartAction/removeProduct.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/CartAction/updataProduct.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -22,6 +34,8 @@
         }
       },
       "layer": {
+        "app/allorders/[userId]/page": "action-browser",
+        "app/allorders/page": "action-browser",
         "app/cart/page": "action-browser",
         "app/checkout/[id]/page": "action-browser",
         "app/page": "action-browser"
