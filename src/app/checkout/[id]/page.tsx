@@ -33,7 +33,7 @@ export default function CheckOut() {
     async function handleOnline(value: CheckoutType) {
         setLoading(true);
         try {
-            const res = await checkoutOnline(id, "", value);
+            const res = await checkoutOnline(id, "https://e-commerce-theta-eight-86.vercel.app/", value);
             console.log(res);
 
             if (res.status === 'success') {
