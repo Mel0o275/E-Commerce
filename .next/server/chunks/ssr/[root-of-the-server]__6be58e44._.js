@@ -80,7 +80,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utilities$2f$getMyTok
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$validate$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/webpack/loaders/next-flight-loader/action-validate.js [app-rsc] (ecmascript)");
 ;
 ;
-async function checkoutOnline(id, url, values) {
+async function checkoutOnline(id, url = process.env.NEXTAUTH_URL, values) {
     const token = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utilities$2f$getMyToken$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"])();
     console.log(token);
     if (!token) {
