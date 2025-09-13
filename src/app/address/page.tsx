@@ -10,7 +10,6 @@ import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import getAddresses from '@/Api/getAddress';
 import removeAddresses from '@/Api/removeAddress';
-import type { Metadata } from "next";
 
 export default function AddAddress() {
   const [addresses, setAddresses] = useState<AddressType[]>([]);
