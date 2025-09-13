@@ -3,7 +3,7 @@
 import { CheckoutType } from "@/schema/checkout";
 import getMyToken from "@/utilities/getMyToken"
 
-export default async function checkoutOnline(id : string, url : string, values : CheckoutType) {
+export default async function checkoutOnline(id : string, url = process.env.NEXTAUTH_URL, values : CheckoutType) {
     const token = await getMyToken();
     console.log(token);
     

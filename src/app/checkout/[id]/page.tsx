@@ -33,7 +33,7 @@ export default function CheckOut() {
     async function handleOnline(value: CheckoutType) {
         setLoading(true);
         try {
-            const res = await checkoutOnline(id, "http://localhost:3000/", value);
+            const res = await checkoutOnline(id, "", value);
             console.log(res);
 
             if (res.status === 'success') {
