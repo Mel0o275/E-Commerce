@@ -157,15 +157,23 @@ const authOptions = {
     callbacks: {
         async jwt ({ token, user }) {
             if (user) {
-                token.user = user.user;
+                token.user = {
+                    name: user.user.name,
+                    email: user.user.email,
+                    role: user.user.role
+                };
                 token.token = user.token;
-                token.sub = user.id;
+                token.sub = user.id; // الـ id من الـ JWT
             }
             return token;
         },
         async session ({ session, token }) {
-            session.user = token.user;
-            session.user.id = token.sub;
+            if (session.user) {
+                session.user.id = token.sub;
+                session.user.name = token.user?.name || "";
+                session.user.email = token.user?.email || "";
+                session.user.role = token.user?.role || "user";
+            }
             return session;
         }
     }
