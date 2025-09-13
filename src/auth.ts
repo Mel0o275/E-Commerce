@@ -21,7 +21,7 @@ export const authOptions: NextAuthOptions = {
                         password: credentials?.password
                     }),
                     headers: {
-                        "content-Type": "application/json"
+                        "Content-Type": "application/json"
                     }
                 }
                 );
