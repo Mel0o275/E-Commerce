@@ -7,7 +7,6 @@ export default function Page() {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-blue-50 to-blue-100">
       <div className="relative w-full max-w-xl h-32 overflow-hidden">
-        {/* العربي */}
         <div className="absolute inset-0 flex items-center">
           <div className="animate-truck flex items-center">
             <span className="w-4 h-4 bg-gray-400 rounded-full opacity-70 mr-2 animate-smoke"></span>
